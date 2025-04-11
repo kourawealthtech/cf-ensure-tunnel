@@ -103,7 +103,7 @@ const getTunnelToken = (id) => {
   setOutput('token', result);
 };
 
-const id = process.env.INPUT_TOKEN || getCurrentTunnelId();
+const id = process.env.INPUT_ID || getCurrentTunnelId();
 if (id) {
   getTunnelToken(id);
 } else {
