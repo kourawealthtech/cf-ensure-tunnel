@@ -37,7 +37,7 @@ const getCurrentTunnelId = () => {
   const { success, result, errors } = JSON.parse(stdout.toString());
 
   if (!success) {
-    console.log(`::error ::${errors[0].message}`);
+    console.log(`::error::Failed to do a lookup:${errors[0].message}`);
     process.exit(1);
   }
 
