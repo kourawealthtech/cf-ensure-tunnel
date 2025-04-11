@@ -1,0 +1,28 @@
+name: "KW: CloudFlare - Delete Tunnel"
+description: "Removes CloudFlare ZaroTrust Tunnel"
+author: "KouraWealth"
+
+inputs:
+  id:
+    description: "Tunnel id"
+  account_id:
+    description: "Tunnel id"
+  name:
+    description: "Tunnel name"
+  config:
+    description: "Indicates if this is a locally ('local') or remotely ('cloudflare') configured tunnel"
+    default: "cloudflare"
+
+outputs:
+  id:
+    description: "Tunnel ID"
+  token:
+    description: "Tunnel access token"
+
+runs:
+  using: "node20"
+  main: "main.js"
+
+branding:
+  icon: "globe"
+  color: "green"
