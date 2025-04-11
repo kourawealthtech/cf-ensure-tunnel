@@ -5,13 +5,17 @@ author: "KouraWealth"
 inputs:
   id:
     description: "Tunnel id"
-  account_id:
-    description: "Tunnel id"
   name:
     description: "Tunnel name"
   config:
     description: "Indicates if this is a locally ('local') or remotely ('cloudflare') configured tunnel"
     default: "cloudflare"
+  account_id:
+    description: "CloudFlare Account ID"
+    required: true
+  token:
+    description: "CloudFlare API token"
+    required: true
 
 outputs:
   id:
