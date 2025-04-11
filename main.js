@@ -79,6 +79,7 @@ const createTunnel = () => {
   }
 
   setOutput('id', result.id);
+  return result.id;
 };
 
 const getTunnelToken = (id) => {
