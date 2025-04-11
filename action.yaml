@@ -1,5 +1,5 @@
-name: "KW: CloudFlare - Delete Tunnel"
-description: "Removes CloudFlare ZaroTrust Tunnel"
+name: "KW: CloudFlare - Create Tunnel"
+description: "Creates CloudFlare ZeroTrust Tunnel"
 author: "KouraWealth"
 
 inputs:

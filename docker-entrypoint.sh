@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-if [ -z "$INPUT_TOKEN" ] ; then
+if [ -z "$INPUT_TOKEN" || -z "$INPUT_ACCOUNT_ID" ] ; then
   echo "One of the required params is empty. Please check all input params. Exiting..."
   exit 1
 fi
