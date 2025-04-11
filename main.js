@@ -74,7 +74,7 @@ const createTunnel = () => {
 
   if (!success) {
     console.dir(errors[0]);
-    console.log(`::error ::${errors[0].message}`);
+    console.log(`::error::Creation failed: ${errors[0].message}`);
     process.exit(1);
   }
 
@@ -95,7 +95,7 @@ const getTunnelToken = (id) => {
   const { success, result, errors } = JSON.parse(stdout.toString());
 
   if (!success) {
-    console.log(`::error ::${errors[0].message}`);
+    console.log(`::error::Token fetching failed: ${errors[0].message}`);
     process.exit(1);
   }
 
@@ -103,7 +103,7 @@ const getTunnelToken = (id) => {
   setOutput('token', result);
 };
 
-const id = getCurrentTunnelId();
+const id = process.env.INPUT_TOKEN || getCurrentTunnelId();
 if (id) {
   getTunnelToken(id);
 } else {
