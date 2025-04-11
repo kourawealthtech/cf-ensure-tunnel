@@ -99,9 +99,8 @@ const getTunnelToken = (id) => {
     process.exit(1);
   }
 
-  const token = result.result;
-  console.log(`::add-mask::${token}`);
-  setOutput('token', token);
+  console.log(`::add-mask::${result}`);
+  setOutput('token', result);
 };
 
 const id = getCurrentTunnelId();
